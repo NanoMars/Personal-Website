@@ -2,19 +2,20 @@
     display: flex;
     flex-direction: row;
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 700px;
     padding-bottom: 20px;
 }
 
 .heading {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 700px;
     padding-top: 20px;
     font-family: 'LiberationSans-Bold', sans-serif;
     font-size: 22px;
+    margin-bottom: 0px;
 }
 
 
@@ -30,7 +31,7 @@
 .blurb-image {
     display: flex;
     flex-direction: column;
-    max-width: 350px;
+    width: 350px;
     justify-content: flex-start;
 }
 
@@ -56,9 +57,46 @@
     margin-top: 0;
 }
 
+.projects {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    max-width: 700px;
+    padding-top: 20px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 350px;
+    height: 300px;
+    padding: 20px;
+}
+
+.project-image {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    background: url(images/FTC.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.project-title {
+    font-family: 'LiberationSans-Bold', sans-serif;
+    font-size: 18px;
+    text-align: left;
+}
+
 @font-face {
     font-family: 'LiberationSans-Bold';
     src: url('./Fonts/LiberationSans-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
+}
+
+h1 {
+    margin-bottom: 0px;
+    margin-block-end: 0px;
 }
