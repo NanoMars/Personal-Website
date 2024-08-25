@@ -1,0 +1,41 @@
+.bio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 600px;
+    padding-bottom: 20px;
+}
+
+.heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 600px;
+    padding-top: 20px;
+}
+
+
+.blurb {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.blurb-image {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    justify-content: flex-start;
+}
+
+.centered {
+    text-align: center;
+}
+
+.align-left {
+    text-align: left;
+}
