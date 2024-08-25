@@ -3,53 +3,48 @@ const projects = [
   { 
     "title": "Building a competition robot",
     "image": "images/FTC.jpg",
+    "link": "Projects/FTC.html"
   },
   { 
     "title": "Building a competition robot",
     "image": "images/FTC.jpg",
+    "link": "Projects/FTC.html"
   },
   { 
     "title": "Building a competition robot",
     "image": "images/FTC.jpg",
+    "link": "Projects/FTC.html"
   },
   { 
     "title": "Building a competition robot",
     "image": "images/FTC.jpg",
+    "link": "Projects/FTC.html"
   },
   { 
     "title": "Building a competition robot",
     "image": "images/FTC.jpg",
+    "link": "Projects/FTC.html"
   },
   { 
     "title": "Building a competition robot",
     "image": "images/FTC.jpg",
+    "link": "Projects/FTC.html"
   },
   { 
     "title": "Building a competition robot",
     "image": "images/FTC.jpg",
+    "link": "Projects/FTC.html"
   },
   { 
     "title": "Building a competition robot",
     "image": "images/FTC.jpg",
+    "link": "Projects/FTC.html"
   },
   { 
     "title": "Building a competition robot",
     "image": "images/FTC.jpg",
+    "link": "Projects/FTC.html"
   },
-  { 
-    "title": "Building a competition robot",
-    "image": "images/FTC.jpg",
-  },
-  { 
-    "title": "Building a competition robot",
-    "image": "images/FTC.jpg",
-  },
-  { 
-    "title": "Building a competition robot",
-    "image": "images/FTC.jpg",
-  },
-  
-  
 ]
 
 document.addEventListener("DOMContentLoaded", loadProjects)
@@ -58,20 +53,34 @@ function loadProjects() {
     const projectsGallery = document.getElementById("projects-gallery")
 
     for (const project of projects) {
-        const projectDiv = document.createElement("div")
-        projectDiv.classList.add("project")
-        projectsGallery.appendChild(projectDiv)
+
+
+
+        
 
         let projectImage = ""
         let projectTitle = ""
+        let projectLink = ""
 
         for (const key in project) {
             if (key === "image") {
                 projectImage = project[key]
             } else if (key === "title" ) {
                 projectTitle = project[key]
-            } 
+            } else if (key === "link") {
+                projectLink = project[key]
+            }
         }
+
+        const projectLinkElement = document.createElement("a");
+        projectLinkElement.href = projectLink;
+        projectLinkElement.classList.add("project")
+        projectLinkElement.style.textDecoration = "none";
+        projectsGallery.appendChild(projectLinkElement);
+        
+        const projectDiv = document.createElement("div")
+        projectDiv.classList.add("project")
+        projectLinkElement.appendChild(projectDiv)
         
         projectDiv.innerHTML += `<div class="project-image" style="background: url(${projectImage}); background-size: cover">` 
 
