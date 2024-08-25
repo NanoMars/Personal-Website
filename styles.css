@@ -1,7 +1,6 @@
 .bio {
     display: flex;
     flex-direction: row;
-    align-items: center;
     margin: 0 auto;
     max-width: 600px;
     padding-bottom: 20px;
@@ -14,21 +13,24 @@
     margin: 0 auto;
     max-width: 600px;
     padding-top: 20px;
+    font-family: 'LiberationSans-Bold', sans-serif;
+    font-size: 22px;
 }
 
 
 .blurb {
     display: flex;
     flex-direction: column;
-    max-width: 300px;
+    min-width: 350px;
     align-items: flex-start;
     height: 100%;
+    justify-content: start;
 }
 
 .blurb-image {
     display: flex;
     flex-direction: column;
-    max-width: 300px;
+    max-width: 350px;
     justify-content: flex-start;
 }
 
@@ -38,4 +40,25 @@
 
 .align-left {
     text-align: left;
+}
+
+.sono-font {
+    font-family: "Sono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 375;
+    font-style: normal;
+    font-variation-settings:
+      "MONO" .65;
+
+}
+
+.paragraph-top {
+    margin-top: 0;
+}
+
+@font-face {
+    font-family: 'LiberationSans-Bold';
+    src: url('./Fonts/LiberationSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
 }
