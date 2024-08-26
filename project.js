@@ -16,7 +16,6 @@ function loadProjects() {
 
             let projectImage = ""
             let projectTitle = ""
-            let projectID = ""
         
             for (const key in project) {
                 if (key === "image") {
