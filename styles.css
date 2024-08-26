@@ -133,18 +133,36 @@
     
 }
 
-.button {
-    display: block;
-    background-color: #c6c6c6f2;
-    border-radius: 10px;
-    height:50px; 
-    width: 125px;
+.button-container {
+    display: flex; flex-flow: row;
+    align-content: stretch;
+    margin: 0 auto; flex: 0 0 auto; max-width: 700px;
+    justify-content: center; height:50px;
+    margin-bottom: 30px;
 }
 
-.button span {
-    vertical-align: middle;
-    margin-top: auto;
-    margin-bottom: auto;
+.button {
+    display: flex; 
+    flex: 1 0 auto; 
+    min-width: 125px; 
+    align-items: center; 
+    justify-content: space-between;
+    border-radius: 10px; 
+    border: 1px solid #000; /* Add a width value to the border property */
+    padding-right: 15px; 
+    margin: 0 5px 0 5px;
+    transition: background-color 0.075s ease;
+}
+
+.button:hover {
+    background-color: #ececec;
+    transition: background-color 0.075s ease;
+}
+
+.button span{
+    font-family: "Sono", monospace;
+    color: #000;
+    text-decoration: none;
 }
 
 .back-button-icon {
