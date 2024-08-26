@@ -10,22 +10,38 @@ import {projects} from "./Projects.js"
 document.addEventListener("DOMContentLoaded", loadProjects)
 
 function loadProjects() {
+    let github = ""
     for (const project of projects) {
-        if (key === "ID") {
-            projectID = getQueryString()
-
-            let projectImage = ""
-            let projectTitle = ""
-        
-            for (const key in project) {
-                if (key === "image") {
-                    projectImage = project[key]
-                } else if (key === "inpage-title" ) {
-                    projectTitle = project[key]
+        for (const key in project) {
+            if (key === "ID" && project[key] === getQueryString()) {
+                for (const key in project) {
+                    if (key === "image") {
+                        document.getElementById("image-header").style.background = `url(../${project[key]})`;
+                        document.getElementById("image-header").style.backgroundSize = "cover";
+                        document.getElementById("image-header").style.backgroundPosition = "50% 50%";
+                    } else if (key === "inpage-title" ) {
+                        document.getElementById("text-header").innerHTML = project[key];
+                    } else if (key === "github") {
+                        github = project[key];
+                    }
                 }
-            }
 
-            document.getElementById("text-header").innerHTML = projectTitle;
+                let iframeLoaded = false
+                const contentIframe = document.getElementById("content-iframe");
+                contentIframe.addEventListener("load", () => {
+                    if (iframeLoaded) {
+                        return;
+                    }
+                    iframeLoaded = true;
+                    contentIframe.src = `../Projects/${project[key]}.html`;
+                    contentIframe.height = contentIframe.contentWindow.document.body.scrollHeight + "px";
+                });
+            }
         }
+    }
+    if (github !== "") {
+        document.getElementById("github").href = github;
+    } else {
+        document.getElementById("github").style.display = "none";
     }
 }

@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", loadProjects)
 function openProject(e) {
     const projectID = e.target.id;
     console.log(e.target);
-    window.location.href = `project.html?${projectID}`;
+    window.location.href = `project.html?${projectID} `;
 }
 
 function loadProjects() {
