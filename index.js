@@ -31,8 +31,8 @@ function loadProjects() {
         projectDiv.classList.add("project")
         projectLinkElement.appendChild(projectDiv)
         
-        projectDiv.innerHTML += `<div class="project-image" style="background: url(${projectImage}); background-size: cover">` 
-
+        projectDiv.innerHTML += `<div class="project-image" style="background: url(${projectImage}); background-size: cover; background-position: 50% 50%;">` 
+        
         const projectTitleDiv = document.createElement("div")
         projectTitleDiv.classList.add("project-title")
         projectDiv.appendChild(projectTitleDiv)
