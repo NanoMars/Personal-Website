@@ -2,12 +2,13 @@ const projects = [
     { 
       "title": "Building a competition robot",
       "image": "images/FTC.jpg",
-      "link": "Projects/FTC.html"
+      "ID": "FTC"
     },
     {
       "title": "Website to shuffle people into groups",
       "image": "images/GroupShuffle.png",
-      "link": "Projects/Group-Shuffle.html"
+      "ID": "Group-Shuffle",
+      "inpage-title": "Group Shuffle",
     }
   ]
 

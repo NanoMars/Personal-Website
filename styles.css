@@ -124,7 +124,8 @@
 .text-header {
     font-family: 'LiberationSans-Bold', sans-serif;
     font-size: 40px;
-    margin-top: 0px;
+    margin-top: 40px;
+    margin-bottom: 20px;
     text-align: center;
     margin-left: auto; 
     margin-right: auto;
@@ -135,7 +136,6 @@
     flex-direction: row;
     margin: 0 auto;
     max-width: 800px;
-    padding-bottom: 35px;
 }
 
 .project-content {
@@ -154,11 +154,19 @@
     margin-bottom: 30px;
 }
 
+.everything-container{
+    display: flex wrap;
+    flex-flow: column nowrap;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0 60px 0 60px;
+}
+
 .paragraph {
     max-width: 800px;
     margin: 0 auto;
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: auto;
+    margin-right: auto;
     font-family: "Sono", monospace;
     text-align: justify;
 }
