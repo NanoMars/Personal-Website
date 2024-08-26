@@ -1,51 +1,4 @@
-
-const projects = [
-  { 
-    "title": "Building a competition robot",
-    "image": "images/FTC.jpg",
-    "link": "Projects/FTC.html"
-  },
-  { 
-    "title": "Building a competition robot",
-    "image": "images/FTC.jpg",
-    "link": "Projects/FTC.html"
-  },
-  { 
-    "title": "Building a competition robot",
-    "image": "images/FTC.jpg",
-    "link": "Projects/FTC.html"
-  },
-  { 
-    "title": "Building a competition robot",
-    "image": "images/FTC.jpg",
-    "link": "Projects/FTC.html"
-  },
-  { 
-    "title": "Building a competition robot",
-    "image": "images/FTC.jpg",
-    "link": "Projects/FTC.html"
-  },
-  { 
-    "title": "Building a competition robot",
-    "image": "images/FTC.jpg",
-    "link": "Projects/FTC.html"
-  },
-  { 
-    "title": "Building a competition robot",
-    "image": "images/FTC.jpg",
-    "link": "Projects/FTC.html"
-  },
-  { 
-    "title": "Building a competition robot",
-    "image": "images/FTC.jpg",
-    "link": "Projects/FTC.html"
-  },
-  { 
-    "title": "Building a competition robot",
-    "image": "images/FTC.jpg",
-    "link": "Projects/FTC.html"
-  },
-]
+import {projects} from "./Projects.js"
 
 document.addEventListener("DOMContentLoaded", loadProjects)
 
@@ -53,10 +6,6 @@ function loadProjects() {
     const projectsGallery = document.getElementById("projects-gallery")
 
     for (const project of projects) {
-
-
-
-        
 
         let projectImage = ""
         let projectTitle = ""
