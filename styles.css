@@ -155,7 +155,8 @@
 }
 
 .everything-container{
-    display: flex wrap;
+    display: flex;
+    flex-wrap: wrap;
     flex-flow: column nowrap;
     justify-content: center;
     box-sizing: border-box;

@@ -28,13 +28,17 @@ function loadProjects() {
 
                 let iframeLoaded = false
                 const contentIframe = document.getElementById("content-iframe");
+                contentIframe.src = `../Projects/${project[key]}.html`;
                 contentIframe.addEventListener("load", () => {
                     if (iframeLoaded) {
                         return;
                     }
                     iframeLoaded = true;
-                    contentIframe.src = `../Projects/${project[key]}.html`;
-                    contentIframe.height = contentIframe.contentWindow.document.body.scrollHeight + "px";
+                    contentIframe.height = (contentIframe.contentWindow.document.body.scrollHeight + 5) + "px";
+                });
+
+                addEventListener("resize", () => {
+                    contentIframe.height = (contentIframe.contentWindow.document.body.scrollHeight + 5) + "px";
                 });
             }
         }
