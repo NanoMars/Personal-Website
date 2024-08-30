@@ -84,8 +84,17 @@
     width: 310px;
     height: 250px;
     margin-bottom: 35px;
-    border-radius: 3px;
+    border-radius: 5px;
     overflow: hidden;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+}
+
+button.project {
+    padding-left: 0 !important;
+    border: none !important;
+    cursor: pointer;
 }
 
 .project-image {
@@ -105,7 +114,9 @@
     margin-bottom: 0px;
     margin-block-start: 0.0em;
     color: #000;
-    padding:5px 5px 10px 5px;
+    padding: 1 
+     a 
+     y ht5s4xz 5px 5px;
 }
 
 .image-header {
