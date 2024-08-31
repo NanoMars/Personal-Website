@@ -1,5 +1,6 @@
 function getQueryString() {
     const queryString = window.location.search;
+    console.log(queryString.substring(1));
     return queryString.substring(1);
 }
 
@@ -28,7 +29,7 @@ function loadProjects() {
 
                 let iframeLoaded = false
                 const contentIframe = document.getElementById("content-iframe");
-                contentIframe.src = `../Projects/${project[key]}.html`;
+                contentIframe.src = `./Projects/${project[key]}.html`;
                 contentIframe.addEventListener("load", () => {
                     if (iframeLoaded) {
                         return;
