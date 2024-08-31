@@ -17,7 +17,7 @@ function loadProjects() {
             if (key === "ID" && project[key] === getQueryString()) {
                 for (const key in project) {
                     if (key === "image") {
-                        document.getElementById("image-header").style.background = `url(https://nanomars.github.io/Personal-Website/images/${project[key]})`;
+                        document.getElementById("image-header").style.background = `url(https://nanomars.github.io/Personal-Website/images/${project[key]}.png)`;
                         document.getElementById("image-header").style.backgroundSize = "cover";
                         document.getElementById("image-header").style.backgroundPosition = "50% 50%";
                     } else if (key === "inpage-title" ) {
