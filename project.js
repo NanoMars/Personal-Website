@@ -29,13 +29,14 @@ function loadProjects() {
 
                 let iframeLoaded = false
                 const contentIframe = document.getElementById("content-iframe");
-                contentIframe.src = `./Projects/${project[key]}.html`;
+                contentIframe.src = `./Projects/${project[key]}`;
                 contentIframe.addEventListener("load", () => {
                     if (iframeLoaded) {
                         return;
                     }
                     iframeLoaded = true;
                     contentIframe.height = (contentIframe.contentWindow.document.body.scrollHeight + 5) + "px";
+                    console.log(contentIframe.contentWindow.location.href);
                 });
 
                 addEventListener("resize", () => {
