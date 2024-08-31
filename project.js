@@ -22,6 +22,7 @@ function loadProjects() {
                         document.getElementById("image-header").style.backgroundPosition = "50% 50%";
                     } else if (key === "inpage-title" ) {
                         document.getElementById("text-header").innerHTML = project[key];
+                        document.title = project[key];
                     } else if (key === "github") {
                         github = project[key];
                     }
