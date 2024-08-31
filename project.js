@@ -29,7 +29,7 @@ function loadProjects() {
 
                 let iframeLoaded = false
                 const contentIframe = document.getElementById("content-iframe");
-                contentIframe.src = `./Projects/${project[key]}`;
+                contentIframe.src = `https://nanomars.github.io/Personal-Website/Projects/${project[key]}`;
                 contentIframe.addEventListener("load", () => {
                     if (iframeLoaded) {
                         return;
